@@ -12,19 +12,22 @@ available_events = set(...)
 """
 
 #read file name from commandline arg
-if len(argv) != 4:
-    print "usage: python scheduler.py [survey.csv] [events.csv] [# iterations]"
+if len(argv) != 5:
+    print "usage: scheduler.py [survey.csv] [events.csv] [# preferences] [# iterations]"
+    print "exiting..."
     exit()
 survey_file = argv[1]
 events_file = argv[2]
-iterations = int(argv[3])
+preferences = int(argv[3])
+iterations = int(argv[4])
 
 people = {}
 events = {}
 available_events = set([])
 
+#read csv files
 if not file_io.setup(survey_file, events_file, 
-                     people, events, available_events):
+                     people, events, available_events, preferences):
     raise Exception
 
 #need to check event not already in 'assigned'
@@ -70,15 +73,16 @@ def schedule(people, events, available_events):
                 attempts += 1
             n -= 1
 
+#assign a score to the current assignment for comparison
 def score(assignments, preference):
     s = 0
     keys = assignments.keys()
     for key in keys:
         assigned = list(assignments[key]['assigned'])
         for event in assigned:
-            #for now we hardcode the number of choices as 3 (7,5,3,1)
+            #for now we hardcode the number of choices as 6 (13,11,9,7,5,3,1)
             try:
-                s += 7-(preference[key]['top'].index(event) << 1)
+                s += 13-(preference[key]['top'].index(event) << 1)
             except ValueError:
                 s += 1
     return s
@@ -97,10 +101,18 @@ for i in range (0,iterations):
         final_assignment = p
         leftover_events = e
 
-for key in final_assignment:
-    print key, list(final_assignment[key]['assigned'])
+#need to sort alphebatically
+keys = final_assignment.keys();
+keys.sort();
+
+#print result
+for key in keys:
+    print key, list(final_assignment[key]['assigned']), "\n"
+
+#print leftover events
 for key in leftover_events:
     if leftover_events[key] > 0:
         print key, " : ", leftover_events[key]
 
+#print score
 print max_score
