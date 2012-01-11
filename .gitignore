@@ -1,5 +1,7 @@
 *.py[co]
 *.pyc
+*~
+#*#
 
 # Packages
 *.egg
