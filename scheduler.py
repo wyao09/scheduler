@@ -80,9 +80,9 @@ def score(assignments, preference):
     for key in keys:
         assigned = list(assignments[key]['assigned'])
         for event in assigned:
-            #for now we hardcode the number of choices as 6 (13,11,9,7,5,3,1)
+            #example scoring for 6 preferences : 13,11,9,7,5,3,1
             try:
-                s += 13-(preference[key]['top'].index(event) << 1)
+                s += 2*preferences+1-(preference[key]['top'].index(event) << 1)
             except ValueError:
                 s += 1
     return s

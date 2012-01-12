@@ -36,17 +36,10 @@ def setup(survey_file, events_file, people,
             people[p] = {'top':[], 'assigned':set([])}
 
             #populate top choices
-            people[p]['top'].append(m.group(2))
-            people[p]['top'].append(m.group(3))
-            people[p]['top'].append(m.group(4))
-            people[p]['top'].append(m.group(5))
-            people[p]['top'].append(m.group(6))
-            people[p]['top'].append(m.group(7))
+            for i in range(2, preferences+2):
+                people[p]['top'].append(m.group(i))
     f.close()
     return True
-
-def write_back(assignment):
-    print 'hi'
 
 #write back
 #delegate ratio constraint
