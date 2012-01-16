@@ -107,12 +107,22 @@ keys.sort();
 
 #print result
 for key in keys:
-    print key, list(final_assignment[key]['assigned']), "\n"
+    print key,
+    for event in list(final_assignment[key]['assigned']):
+        print ","+event,
+    print ''
 
 #print leftover events
 for key in leftover_events:
     if leftover_events[key] > 0:
         print key, " : ", leftover_events[key]
 
-#print score
-print max_score
+print "------------------------"
+
+#print by event
+for event in events:
+    print event
+    for key in keys:
+        if event in final_assignment[key]['assigned']:
+            print key
+    print ''
