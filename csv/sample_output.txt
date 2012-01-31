@@ -1,0 +1,91 @@
+Articuno ,HBS Tour ,Scavenger Hunt ,Coop ,Sam Adams/Chocolate Factory 
+Charmander ,Microsoft NERD ,Coop ,Sam Adams/Chocolate Factory 
+Dragonite ,Boston Tour ,iLab ,Coop ,Prudential Skywalk 
+Jon ,HBS Tour ,Microsoft NERD ,Coop ,Ice Skating 
+Kim ,Scavenger Hunt ,Microsoft NERD ,Prudential Skywalk 
+Lapras ,Scavenger Hunt ,iLab ,Coop ,Sam Adams/Chocolate Factory 
+Magikarp ,Microsoft NERD ,Coop ,Harvard Tour 
+Mew ,iLab ,Microsoft NERD ,Boston Tour 
+Mewtwo ,Scavenger Hunt ,Prudential Skywalk ,Harvard Tour ,HBS Tour 
+Moltres ,MIT Tour ,HBS Tour ,Coop ,Prudential Skywalk 
+Paolo ,Scavenger Hunt ,Boston Tour ,Harvard Tour 
+Pikachu ,MIT Tour ,Ice Skating ,Harvard Tour 
+Willie ,Coop ,Prudential Skywalk ,Ice Skating ,Harvard Tour 
+Yusuke ,HBS Tour ,iLab ,Sam Adams/Chocolate Factory 
+Zapdos ,MIT Tour ,HBS Tour ,iLab ,Boston Tour 
+------------------------
+Coop
+Articuno
+Charmander
+Dragonite
+Jon
+Lapras
+Magikarp
+Moltres
+Willie
+
+iLab
+Dragonite
+Lapras
+Mew
+Yusuke
+Zapdos
+
+Ice Skating
+Jon
+Pikachu
+Willie
+
+Scavenger Hunt
+Articuno
+Kim
+Lapras
+Mewtwo
+Paolo
+
+Microsoft NERD
+Charmander
+Jon
+Kim
+Magikarp
+Mew
+
+Prudential Skywalk
+Dragonite
+Kim
+Mewtwo
+Moltres
+Willie
+
+Harvard Tour
+Magikarp
+Mewtwo
+Paolo
+Pikachu
+Willie
+
+MIT Tour
+Moltres
+Pikachu
+Zapdos
+
+HBS Tour
+Articuno
+Jon
+Mewtwo
+Moltres
+Yusuke
+Zapdos
+
+Boston Tour
+Dragonite
+Mew
+Paolo
+Zapdos
+
+Sam Adams/Chocolate Factory
+Articuno
+Charmander
+Lapras
+Yusuke
+
